@@ -1,0 +1,23 @@
+{
+  "name": "anvil.template",
+  "version": "0.1.0",
+  "description": "HTML template rendering for anvil",
+  "main": "lib/template.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/arobson/anvil.template"
+  },
+  "keywords": [
+    "anvil",
+    "html",
+    "template",
+    "render"
+  ],
+  "dependencies": {
+    "handlebars": "~1.0",
+    "yaml-js": "~0.0.5"
+  },
+  "author": "Alex Robson",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
