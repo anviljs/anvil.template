@@ -119,7 +119,7 @@ module.exports = function( _, anvil ) {
 		},
 
 		getRelativePath: function( file ) {
-			return anvil.fs.buildPath( [ file.relativePath, file.name ] ).replace( /^[.][\\\/]/, "" );
+			return anvil.fs.buildPath( [ file.relativePath, file.name ] ).replace( /^[.][\\\/]/, "" ).replace( /^(\\|\/)/, "");
 		},
 
 		normalizeConfig: function() {
