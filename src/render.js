@@ -78,16 +78,17 @@ module.exports = function( _, anvil ) {
 							if( !err ) {
 								var newFile = _.deepExtend( {}, file ),
 									newName = path.basename( output );
+								
 								newFile.name = newName;
 								anvil.project.files.push( newFile );
 								anvil.fs.write( [ file.workingPath, newName ], result, function() { done(); } );
+								file.noCopy = true;
 							} else {
 								anvil.log.error( "Error rendering template, '" + relative + "' " + err );
 								done();
 							}
 						}, context.options || {} );
 					} );
-					file.noCopy = true;
 				} );
 			} else {
 				done();
@@ -113,13 +114,16 @@ module.exports = function( _, anvil ) {
 
 		getFile: function( relativePath ) {
 			var self = this;
+
 			return _.find( anvil.project.files, function( file ) {
 				return relativePath === self.getRelativePath( file );
 			} );
 		},
 
 		getRelativePath: function( file ) {
-			return anvil.fs.buildPath( [ file.relativePath, file.name ] ).replace( /^[.][\\\/]/, "" ).replace( /^(\\|\/)/, "");
+			return anvil.fs.buildPath( [ file.relativePath, file.name ] )
+				.replace( /^[.][\\\/]/, "" )
+				.replace( /^(\\|\/)/, "");
 		},
 
 		normalizeConfig: function() {
