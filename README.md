@@ -58,10 +58,10 @@ Each output file gets its own configuration block. This block can be used to:
 {
 	"anvil.template": {
 		"files": {
-			"/input-template.hbrs": {
-				"/output-1.html": {
+			"input-template.hbrs": {
+				"output-1.html": {
 					"template-specific-key": "template-specific-value",
-					"data": [ "/file-1.json", "file-2.json" ],
+					"data": [ "file-1.json", "file-2.json" ],
 					"options": { ... } // specific to each engine
 				}
 			}

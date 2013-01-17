@@ -1,6 +1,6 @@
 {
   "name": "anvil.template",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "HTML template rendering for anvil",
   "main": "lib/template.js",
   "repository": {
@@ -19,7 +19,7 @@
   },
   "author": "Alex Robson <alex@sharplearningcurve.com> (http://sharplearningcurve.com)",
   "contributors": [
-    "Jonathan Creamer (http://freshbrewedcode.com/jonathancreamer/)"
+    "Jonathan Creamer (http://jcreamerlive.com)"
   ],
   "license": "MIT",
   "readmeFilename": "README.md"
