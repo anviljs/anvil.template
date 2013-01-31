@@ -1,4 +1,6 @@
-var handlebars;
+var handlebars,
+	path = require( "path" );
+
 module.exports = function( _, anvil ) {
 	anvil.plugin( {
 		name: "anvil.handlebars",
