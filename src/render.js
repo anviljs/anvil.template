@@ -189,7 +189,6 @@ module.exports = function( _, anvil ) {
 									done();
 								} );
 							} else {
-								done();
 								anvil.stopBuild( "Error rendering template, '" + relative + "' \n" + err );
 							}
 						}, context.options || {} );
