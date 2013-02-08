@@ -185,17 +185,16 @@ module.exports = function( _, anvil ) {
 									anvil.project.files.push( newFile );
 								}
 								newFile.noCopy = false;
-								anvil.fs.write( outputPath, result, function() {} );
+								anvil.fs.write( outputPath, result, function() {
+									done();
+								} );
 							} else {
-								stop = true;
+								done();
 								anvil.stopBuild( "Error rendering template, '" + relative + "' \n" + err );
 							}
 						}, context.options || {} );
 					} );
 					file.noCopy = true;
-					if( !stop ) {
-						done();
-					}
 				} );
 			} else {
 				done();
