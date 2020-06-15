@@ -14,7 +14,7 @@
     "render"
   ],
   "dependencies": {
-    "handlebars": "~1.0",
+    "handlebars": "~4.7",
     "yaml-js": "~0.0.5"
   },
   "author": "Alex Robson <alex@sharplearningcurve.com> (http://sharplearningcurve.com)",
